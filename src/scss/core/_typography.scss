@@ -1,0 +1,14 @@
+.responsive-title {
+  font-size: 32px;
+
+  @include sm {
+    font-size: 36px;
+    
+  }
+}
+
+.text-size {
+  font-size: 22.5px;
+}
+
+// make a responsive title style

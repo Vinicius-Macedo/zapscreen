@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// CORE
+@import "core/breakpoints";
+@import "core/colors";
+@import "core/typography";
+@import "core/utilities";
+
+// PARTIALS
+@import "partials/header";
+@import "partials/footer";
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: $white;
+}
+
+.blink-animation {
+  position: relative;
+
+  &::after {
+    content: "|";
+   padding-bottom: 4px;
+   margin-right: 10px;
+    
+    animation: blink 1s step-start infinite;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
