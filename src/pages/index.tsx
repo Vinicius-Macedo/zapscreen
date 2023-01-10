@@ -6,14 +6,12 @@ import ServicesSection from "../components/sections/ServicesSection";
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <HeroSection />
-        <AboutMeSection />
-        <ServicesSection />
-        <HardSkillsSection />
-        <HowWeGonnaWorkSection />
-      </main>
-    </>
+    <main>
+      <HeroSection />
+      <AboutMeSection />
+      <ServicesSection />
+      <HardSkillsSection />
+      <HowWeGonnaWorkSection />
+    </main>
   );
 }
