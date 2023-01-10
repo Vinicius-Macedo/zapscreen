@@ -14,7 +14,7 @@ import { CardTextContext } from "../../contexts/CardTextContext";
 import { DefaultMarginSection } from "../DefaultMarginSection";
 import SkillCard from "../SkillCard";
 
-export default function () {
+export default function HardSkillsSection() {
   const { cardText, setCardText } = useContext(CardTextContext);
 
   return (
