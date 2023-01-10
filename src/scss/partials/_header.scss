@@ -2,7 +2,7 @@ $w-bars: 30px;
 $h-bars: 3px;
 
 .overflow {
-  visibility: none;
+  display: none;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -13,14 +13,65 @@ $h-bars: 3px;
     // background-color: rgba(0, 0, 0, 0.5);
     display: block;
   }
+
+  @include xl {
+    display: none;
+
+    &.active {
+      display: none;
+    }
+  }
 }
 
 .header {
+  position: relative;
   width: 100%;
   z-index: 10;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
+
+  // mostra o scroll fixado no top
+  &.show {
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0px;
+  }
+
+  // esconde o scroll fixado no top
+  &.hide {
+    position: fixed;
+    top: -80px;
+    left: 0px;
+  }
+
+  // efeito de transição
+  &.transition {
+    transition: 0.5s;
+  }
+
+  // mudar plano de fundo do header
+  &.scrolled {
+    background: #131111;
+
+    &::after {
+      content: "";
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    transition: 0.5s;
+    width: 0;
+    height: 1px;
+    background: #1b1818;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+  }
 
   .menu {
     background: rgba(0, 0, 0, 0);
@@ -73,7 +124,7 @@ $h-bars: 3px;
         cursor: pointer;
 
         .link {
-          transition: .3s;
+          transition: 0.3s;
           color: #e6e6e6;
         }
 

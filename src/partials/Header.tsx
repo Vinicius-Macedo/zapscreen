@@ -1,11 +1,15 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-
+import useScroll from "../hooks/useScroll";
 const imageLoader = require("./../loader.js");
+
+type ScrollStatusType = "scrolled" | "scrolled upped" | "";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrollingUp, lastScroll] = useScroll();
+  const [scrollStatus, setScrollStatus] = useState<ScrollStatusType>("");
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -15,8 +19,32 @@ export function Header() {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (scrollStatus === "" && lastScroll > 80) {
+      setScrollStatus("scrolled");
+    } else if (scrollStatus === "scrolled" && isScrollingUp) {
+      setScrollStatus("scrolled upped");
+    } else if (scrollStatus === "scrolled upped" && lastScroll === 0) {
+      setScrollStatus("");
+    }
+  }, [lastScroll]);
+
   return (
-    <header className="header">
+    <header
+      className={
+        "header" +
+        (!isScrollingUp &&
+        (scrollStatus === "scrolled" || scrollStatus === "scrolled upped")
+          ? " hide"
+          : "") +
+        (isScrollingUp &&
+        (scrollStatus === "scrolled" || scrollStatus === "scrolled upped")
+          ? " show"
+          : "") +
+        (scrollStatus === "scrolled upped" ? " transition" : "") +
+        (lastScroll > 80 ? " scrolled" : "")
+      }
+    >
       <nav className={"menu" + (isMenuOpen ? " open" : "")}>
         <Link href="/" as="image">
           <figure className="relative w-[80px] h-[40px]">

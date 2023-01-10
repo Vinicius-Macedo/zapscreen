@@ -17,7 +17,6 @@ function useTyping(wordsArray: Array<string>) {
     if (effectState == "Erasing") {
       setTimeout(() => {
         setTypedWord((value) => value.slice(0, value.length - 1));
-        console.log(typedWord);
       }, 50);
     }
   }

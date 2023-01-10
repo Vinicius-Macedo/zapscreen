@@ -1,0 +1,157 @@
+.animation-container {
+  &:hover {
+    .animation-left-right {
+      animation-play-state: paused;
+    }
+  }
+
+  .animation-left-right {
+    animation: left-right 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.line-green-after {
+  position: relative;
+  padding-bottom: 16px;
+
+  &.active {
+    &:after {
+      transition: 0.3s;
+      width: 50%;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $green;
+
+    @include lg {
+      transform: translateX(0);
+      left: 0;
+    }
+  }
+}
+
+.line-green-after {
+  position: relative;
+  padding-bottom: 16px;
+
+  &.active {
+    &:after {
+      transition: 0.3s;
+      width: 50%;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $green;
+
+    @include lg {
+      transform: translateX(0);
+      left: 0;
+    }
+  }
+}
+
+.line-green-after-center {
+  position: relative;
+  padding-bottom: 16px;
+
+  &.line-w-120px {
+    &:after {
+      transition: 0.3s;
+      width: 120px;
+    }
+  }
+
+  &.line-w-120px-sm-260px {
+    &:after {
+      transition: 0.3s;
+      width: 120px;
+
+      @include sm {
+        width: 260px;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $green;
+  }
+}
+
+.not-selectable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.blink-animation {
+  position: relative;
+
+  &::after {
+    content: "|";
+    padding-bottom: 4px;
+    margin-right: 10px;
+
+    animation: blink 1s step-start infinite;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+// hide scrollbar, but allow scrolling
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+}

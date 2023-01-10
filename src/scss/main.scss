@@ -18,14 +18,35 @@ html {
   color: $white;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: 4px;
+  scrollbar-color: #70ebc6 #a6ff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #70ebc6;
+  border-radius: 999px;
+}
+
 .blink-animation {
   position: relative;
 
   &::after {
     content: "|";
-   padding-bottom: 4px;
-   margin-right: 10px;
-    
+    padding-bottom: 4px;
+    margin-right: 10px;
+
     animation: blink 1s step-start infinite;
   }
 }
@@ -34,6 +55,12 @@ html {
   50% {
     opacity: 0;
   }
+}
+
+// all grid templates rows with 1fr
+.grid-rows-1fr {
+  grid-template-rows: repeat(4, 1fr);
+  
 }
 
 // font-family: 'Open Sans', sans-serif;

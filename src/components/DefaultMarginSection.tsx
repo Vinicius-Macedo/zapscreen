@@ -7,26 +7,28 @@ type DefaultMarginSectionProps = {
   id?: string;
   hasNoMarginTop?: boolean;
   hasNoMarginBottom?: boolean;
-  isRelative: boolean;
   sectionTop?: ReactNode;
   sectionBottom?: ReactNode;
+  ref?: any;
+  onWheel?: (event: React.WheelEvent<HTMLDivElement>) => void;
+  onMouseEnter?: (event: React.MouseEvent) => void;
+  onMouseLeave?: (event: React.MouseEvent) => void;
 };
 
 export function DefaultMarginSection(props: DefaultMarginSectionProps) {
   return (
     <section
       id={props.id}
+      // ref={props.ref}
+      onWheel={props.onWheel}
+      onMouseEnter={() => props.onMouseEnter}
+      onMouseLeave={() => props.onMouseLeave}
       className={props.containerClassname}
-
-      // className={`px-8 py-32 sm:px-16 md:py-64 xl:px-0 ${
-      //   props.hasNoMarginTop ? "xl:pt-0" : ""
-      // } xl:w-[1110px] xl:m-auto${classWithoutSpace}`}
     >
       {props.sectionTop}
-
       <div
         className={
-          "relative px-16 py-32 md:py-64 xl:px-0 xl:w-[1110px] xl:m-auto" +
+          "relative px-16 py-32 md:py-32 xl:px-0 xl:w-[1110px] xl:m-auto" +
           (props.hasNoMarginTop ? " xl:pt-0" : "") +
           (props.hasNoMarginBottom ? " xl:pb-0" : "") +
           (props.className ? " " + props.className : "")

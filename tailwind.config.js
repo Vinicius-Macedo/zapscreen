@@ -135,6 +135,7 @@ module.exports = {
       colors: {
         green: "#71ebc6",
         darkgreen: "#4de6b8",
+        whitegrey: "rgba(255, 255, 255, 0.8);",
         white: "#ffffff",
         black: "#131111",
         dark: "#0f0e0e",
