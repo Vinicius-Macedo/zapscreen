@@ -1,4 +1,5 @@
 import AboutMeSection from "../components/sections/AboutMeSection";
+import FaqSection from "../components/sections/FaqSection";
 import HardSkillsSection from "../components/sections/HardSkillsSection";
 import HeroSection from "../components/sections/HeroSection";
 import HowWeGonnaWorkSection from "../components/sections/HowWeGonnaWorkSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesSection />
       <HardSkillsSection />
       <HowWeGonnaWorkSection />
+      <FaqSection />
     </main>
   );
 }
