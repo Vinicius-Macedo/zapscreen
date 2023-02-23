@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <CardTextProvider>
         <Head>
-          <title>Vinicius Macedo - Desenvolvedor Web</title>
+          <title>Zapscreen - Compartilhando memórias em tempo real</title>
         </Head>
         <Header />
         <Component {...pageProps} />

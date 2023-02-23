@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode, useRef, useState } from "react";
+import { useIsVisible } from "../hooks/useIsVisible";
 
 type DefaultMarginSectionProps = {
   children: ReactNode;
   className?: string;
-  containerClassname?: string;
+  containerClassName?: string;
   id?: string;
   hasNoMarginTop?: boolean;
   hasNoMarginBottom?: boolean;
@@ -11,20 +12,36 @@ type DefaultMarginSectionProps = {
   sectionBottom?: ReactNode;
   extraSpace?: boolean;
   ref?: any;
+  styles?: CSSProperties;
+  hasEffect?: boolean;
   onWheel?: (event: React.WheelEvent<HTMLDivElement>) => void;
   onMouseEnter?: (event: React.MouseEvent) => void;
   onMouseLeave?: (event: React.MouseEvent) => void;
 };
 
 export function DefaultMarginSection(props: DefaultMarginSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(ref);
+  const [alreadyVisible, setAlreadyVisible] = useState(false);
+
   return (
     <section
       id={props.id}
-      // ref={props.ref}
+      ref={ref}
       onWheel={props.onWheel}
       onMouseEnter={() => props.onMouseEnter}
       onMouseLeave={() => props.onMouseLeave}
-      className={props.containerClassname}
+      className={
+        (props.hasEffect
+          ? isVisible && !alreadyVisible
+            ? [setAlreadyVisible(true), "element is-visible"]
+            : alreadyVisible
+            ? "element is-visible"
+            : "element"
+          : "") +
+        (props.containerClassName ? " " + props.containerClassName : "")
+      }
+      style={props.styles}
     >
       {props.sectionTop}
       <div

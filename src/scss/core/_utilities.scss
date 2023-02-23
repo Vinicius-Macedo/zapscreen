@@ -157,17 +157,17 @@ img {
 }
 
 .faq-container {
-  transition: 1s;
+  transition: 1.5s;
   font-size: 20px;
   display: flex;
   // padding: 16px 32px 0px 32px;
+  border-bottom: solid #28292b 1px;
   flex-direction: column;
   gap: 16px;
-  @apply bg-black;
 
   .resposta {
     font-size: 18px;
-    transition: 1s;
+    transition: 1.5s;
     max-height: 0;
     overflow-y: hidden;
     visibility: hidden;
@@ -178,8 +178,6 @@ img {
     &::-webkit-scrollbar {
       display: none;
     }
-
-    @apply bg-[#141212] px-16;
   }
 
   .dropdown-icon {
@@ -188,7 +186,7 @@ img {
   }
 
   .pergunta-container {
-    @apply flex items-start sm:items-center justify-between cursor-pointer px-16 pt-8;
+    @apply flex items-start sm:items-center justify-between cursor-pointer pt-8;
   }
 }
 

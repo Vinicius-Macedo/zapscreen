@@ -5,3 +5,15 @@ $whiteGrey: rgba(255, 255, 255, 0.8);
 $whiteGrey2: rgba(255, 255, 255, 0.9);
 $black: #131111;
 $dark: #0f0e0e;
+
+.text-gradient {
+  background: linear-gradient(270deg, #88c139 0%, #44ad3a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-gradient {
+  background: linear-gradient(270deg, #88c139 0%, #44ad3a 100%);
+}

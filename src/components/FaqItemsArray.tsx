@@ -44,7 +44,7 @@ export function FaqItemsArray(props: FaqItemProps) {
               {item.title}
             </p>
             <figure className="dropdown-icon">
-              <RiArrowDropDownLine color="#ffffff" size={55} />
+              <RiArrowDropDownLine color="#44ad3a" size={55} />
             </figure>
           </div>
 

@@ -22,7 +22,7 @@ html {
 /* Firefox */
 * {
   scrollbar-width: 4px;
-  scrollbar-color: #70ebc6 #a6ff00;
+  scrollbar-color: #88c139 #a6ff00;
 }
 
 /* Chrome, Edge, and Safari */
@@ -35,7 +35,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #70ebc6;
+  background-color: #88c139;
   border-radius: 999px;
 }
 
@@ -57,10 +57,28 @@ html {
   }
 }
 
-// all grid templates rows with 1fr
-.grid-rows-1fr {
-  grid-template-rows: repeat(4, 1fr);
-  
+.title {
+  @apply text-[2rem] lg:text-[2.25rem];
+}
+
+.semititle {
+  @apply text-[1.5rem];
+}
+
+.text {
+  @apply text-[1.125rem] lg:text-[1.3906rem];
+}
+
+.element {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease-in-out;
+
+  &.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 // font-family: 'Open Sans', sans-serif;

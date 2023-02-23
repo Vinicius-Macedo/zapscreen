@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{tsx,ts}"],
-  safelist: ["bg-black"],
+  safelist: ["bg-dark"],
   theme: {
     extend: {
       spacing: {
@@ -129,16 +129,14 @@ module.exports = {
         full: "1920px",
       },
       fontFamily: {
-        sans: "'Open Sans', sans-serif",
+        sans: "'Roboto', sans-serif",
         ubuntu: "'Ubuntu', sans-serif",
       },
       colors: {
-        green: "#71ebc6",
-        darkgreen: "#4de6b8",
-        whitegrey: "rgba(255, 255, 255, 0.8);",
+        green: "#44ad3a",
+        whitegray: "rgba(255, 255, 255, 0.75);",
         white: "#ffffff",
-        black: "#131111",
-        dark: "#0f0e0e",
+        dark: "#000204",
       },
     },
   },
