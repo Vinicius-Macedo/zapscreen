@@ -103,9 +103,9 @@ export default function Home() {
             unoptimized
           />
           <StepSection
-            title={"A IA melhora a foto"}
+            title={"A foto é exibida no telão"}
             description={
-              "A foto é exibida no telão: Chegou a hora de ver sua foto brilhar nos telões! Depois de passar pelas etapas de moderação e melhoria, sua imagem será exibida para que todos possam vê-la e compartilhar a experiência. Sinta-se um verdadeiro fotógrafo profissional!"
+              "Chegou a hora de ver sua foto brilhar nos telões! Depois de passar pelas etapas de moderação e melhoria, sua imagem será exibida para que todos possam vê-la e compartilhar a experiência. Sinta-se um verdadeiro fotógrafo profissional!"
             }
             number={"04"}
             isClockWise={true}
