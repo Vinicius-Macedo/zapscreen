@@ -114,16 +114,14 @@ export function Header() {
           className={"overflow" + (isMenuOpen ? " active" : "")}
         ></div>
       </header>
-      <a
+      <Link
         href="#"
         className="fixed w-full max-w-[1110px] left-1/2 -translate-x-1/2 bottom-16 z-10 flex justify-end"
       >
         <div className="bg-[#25D366] rounded-full w-30 h-30 flex justify-center items-center mr-8 xl:mr-0">
-          <Link href={"#"}>
-            <SiWhatsapp size={30} />
-          </Link>
+          <SiWhatsapp size={30} />
         </div>
-      </a>
+      </Link>
     </>
   );
 }
