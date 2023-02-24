@@ -289,6 +289,9 @@ export default function Home() {
         </Link>
       </DefaultMarginSection>
       <DefaultMarginSection className="flex flex-col gap-8 sm:gap-16 lg:gap-32">
+        <h2 className="title font-ubuntu font-bold text-center">
+          Título aqui <span className="text-gradient">com destaque aqui</span>
+        </h2>
         <div className="grid gap-15 lg:grid-cols-3">
           <Topic
             title={"Título do Card"}
