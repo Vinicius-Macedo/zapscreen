@@ -10,7 +10,7 @@ type Props = {
 
 export default function Icone(props: Props) {
   return (
-    <div className="flex flex-col gap-8 w-56 items-center">
+    <div className="flex flex-col gap-8  items-center">
       <Image
         src={props.imageUrl}
         alt={props.imageAlt}

@@ -231,14 +231,24 @@ export default function Home() {
           <h2 className="title font-ubuntu font-bold text-center">
             Para todos os tipos de <span className="text-gradient">evento</span>
           </h2>
-          <p className="text text-whitegray text-center">
+          <p className="text text-whitegray text-center max-w-[591px]">
             Nosso sistema de exibição de fotos em tempo real é perfeito para
             todos os tipos de eventos, desde casamentos até festas de
             aniversário!
           </p>
         </article>
 
-        <div className="flex justify-center flex-wrap items-end gap-15 lg:justify-between">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-wrap items-end gap-15 lg:w-full lg:justify-between">
+          <Icone
+            imageUrl={"/img/icone-08.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Música"}
+          />
+          <Icone
+            imageUrl={"/img/icone-07.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Formaturas"}
+          />
           <Icone
             imageUrl={"/img/icone-01.svg"}
             imageAlt={"Icone de evento"}
@@ -279,9 +289,6 @@ export default function Home() {
         </Link>
       </DefaultMarginSection>
       <DefaultMarginSection className="flex flex-col gap-8 sm:gap-16 lg:gap-32">
-        <h2 className="title font-ubuntu font-bold text-center">
-          Título aqui <span className="text-gradient">com destaque aqui</span>
-        </h2>
         <div className="grid gap-15 lg:grid-cols-3">
           <Topic
             title={"Título do Card"}
