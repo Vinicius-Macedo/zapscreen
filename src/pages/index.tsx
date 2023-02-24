@@ -279,6 +279,24 @@ export default function Home() {
         </Link>
       </DefaultMarginSection>
       <FaqSection />
+      <DefaultMarginSection className="flex flex-col items-center gap-16">
+        <div className="flex-col gap-4 flex">
+          <h2 className="title font-ubuntu font-bold text-center">
+            Ainda não ficou <span className="text-gradient">satisfeito?</span>
+          </h2>
+          <p className="text text-whitegray text-center">
+            Por que simplesmente não fala com gente?
+            <br /> Ficaremos feliz com o seu contato
+          </p>
+        </div>
+        <Link
+          href="https://wa.me/5548999999"
+          target={"_blank"}
+          className="bg-gradient text-white px-12 py-6 rounded font-bold"
+        >
+          quero falar
+        </Link>
+      </DefaultMarginSection>
     </main>
   );
 }

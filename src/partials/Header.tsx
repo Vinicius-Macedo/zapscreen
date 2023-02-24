@@ -5,6 +5,7 @@ import useScroll from "../hooks/useScroll";
 const imageLoader = require("./../loader.js");
 import { SiWhatsapp } from "react-icons/si";
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
 
 type ScrollStatusType = "scrolled" | "scrolled upped" | "";
 
@@ -89,7 +90,7 @@ export function Header() {
               </Link>
             </li>
             <li className="item">
-              <div className="flex gap-8">
+              <div className="flex gap-12">
                 <Link
                   aria-label="facebook"
                   href={"https://www.facebook.com/ozapscreen"}
@@ -110,6 +111,14 @@ export function Header() {
                   target={"_blank"}
                 >
                   <BsYoutube size={25} />
+                </Link>
+
+                <Link
+                  aria-label="tiktok"
+                  href="https://tiktok.com/@zapscreen"
+                  target={"_blank"}
+                >
+                  <FaTiktok size={25} />
                 </Link>
               </div>
             </li>
