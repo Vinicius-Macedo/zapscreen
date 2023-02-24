@@ -13,8 +13,7 @@ export default function HeroSection() {
   return (
     <DefaultMarginSection
       id="home"
-      styles={{ backgroundImage: "url(/img/hero-party-background.webp)" }}
-      containerClassName="overflow-hidden pt-40 bg-center bg-cover bg-no-repeat"
+      containerClassName="overflow-hidden pt-40 bg-center bg-cover bg-no-repeat bg-home"
     >
       <div className="max-w-[540px] text-center flex flex-col items-center m-auto gap-12 sm:py-64">
         <div className="flex flex-col gap-4">

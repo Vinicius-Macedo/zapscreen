@@ -81,5 +81,13 @@ html {
   }
 }
 
+.bg-home {
+  background-image: url(/img/hero-party-background-p.webp);
+
+  @include md {
+    background-image: url(/img/hero-party-background.webp);
+  }
+}
+
 // font-family: 'Open Sans', sans-serif;
 // font-family: 'Ubuntu', sans-serif;
