@@ -9,6 +9,7 @@ import Testimonial from "../components/Testimonial";
 import { SectionWithVideo } from "../components/SectionWithVideo";
 import Link from "next/link";
 import Icone from "../components/Icone";
+import Topic from "../components/Topic";
 
 export default function Home() {
   return (
@@ -221,6 +222,7 @@ export default function Home() {
           Tenha no seu evento
         </Link>
       </DefaultMarginSection>
+
       <DefaultMarginSection
         hasEffect={true}
         className="flex flex-col items-center gap-16 lg:gap-32"
@@ -232,9 +234,7 @@ export default function Home() {
           <p className="text text-whitegray text-center">
             Nosso sistema de exibição de fotos em tempo real é perfeito para
             todos os tipos de eventos, desde casamentos até festas de
-            aniversário! Com ele, todos os convidados podem participar e
-            compartilhar suas memórias, criando uma experiência única e
-            emocionante. Experimente agora e torne seu evento inesquecível!
+            aniversário!
           </p>
         </article>
 
@@ -277,6 +277,49 @@ export default function Home() {
         >
           Tenha no seu evento
         </Link>
+      </DefaultMarginSection>
+      <DefaultMarginSection className="flex flex-col gap-8 sm:gap-16 lg:gap-32">
+        <h2 className="title font-ubuntu font-bold text-center">
+          Título aqui <span className="text-gradient">com destaque aqui</span>
+        </h2>
+        <div className="grid gap-15 md:grid-cols-3">
+          <Topic
+            title={"Título do Card"}
+            desc={
+              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+            }
+          />
+          <Topic
+            title={"Título do card"}
+            desc={
+              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+            }
+          />
+          <Topic
+            title={"Título do card"}
+            desc={
+              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+            }
+          />
+          <Topic
+            title={"Título do card"}
+            desc={
+              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+            }
+          />
+          <Topic
+            title={"Título do card"}
+            desc={
+              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+            }
+          />
+          <Topic
+            title={"Título do card"}
+            desc={
+              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+            }
+          />
+        </div>
       </DefaultMarginSection>
       <FaqSection />
       <DefaultMarginSection className="flex flex-col items-center gap-16">
