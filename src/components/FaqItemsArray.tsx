@@ -49,7 +49,7 @@ export function FaqItemsArray(props: FaqItemProps) {
           </div>
 
           <p className="resposta">
-            <br />
+          
             {item.text.split("\n").map((item, i) => (
               <React.Fragment key={i}>
                 <span>{item}</span>
@@ -57,7 +57,7 @@ export function FaqItemsArray(props: FaqItemProps) {
                 <br />
               </React.Fragment>
             ))}
-            <br />
+      
           </p>
         </li>
       ))}

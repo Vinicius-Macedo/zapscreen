@@ -282,27 +282,9 @@ export default function Home() {
         <h2 className="title font-ubuntu font-bold text-center">
           Título aqui <span className="text-gradient">com destaque aqui</span>
         </h2>
-        <div className="grid gap-15 md:grid-cols-3">
+        <div className="grid gap-15 lg:grid-cols-3">
           <Topic
             title={"Título do Card"}
-            desc={
-              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
-            }
-          />
-          <Topic
-            title={"Título do card"}
-            desc={
-              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
-            }
-          />
-          <Topic
-            title={"Título do card"}
-            desc={
-              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
-            }
-          />
-          <Topic
-            title={"Título do card"}
             desc={
               "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
             }
