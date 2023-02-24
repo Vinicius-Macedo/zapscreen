@@ -90,6 +90,15 @@ export function Header() {
               </Link>
             </li>
             <li className="item">
+              <Link
+                href="http://blog.zapscreen.com.br/"
+                target={"_blank"}
+                className="link"
+              >
+                Blog
+              </Link>
+            </li>
+            <li className="item">
               <div className="flex gap-12">
                 <Link
                   aria-label="facebook"
