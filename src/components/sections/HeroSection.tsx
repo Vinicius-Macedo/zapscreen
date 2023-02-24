@@ -1,8 +1,7 @@
 import React from "react";
-import imageLoader from "../../loader";
 import { DefaultMarginSection } from "../DefaultMarginSection";
-import Image from "next/image";
 import useTyping from "../../hooks/useTyping";
+import Link from "next/link";
 
 export default function HeroSection() {
   const typedWords = useTyping([
@@ -28,9 +27,13 @@ export default function HeroSection() {
             Tenha {typedWords}
           </p>
         </div>
-        <button className="bg-gradient text-white px-12 py-6 rounded-full font-bold">
+        <Link
+          href="https://wa.me/5548999999"
+          target={"_blank"}
+          className="bg-gradient text-white px-12 py-6 rounded-full font-bold"
+        >
           Tenha no seu evento
-        </button>
+        </Link>
       </div>
     </DefaultMarginSection>
   );

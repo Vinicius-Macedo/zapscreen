@@ -90,13 +90,22 @@ export function Header() {
             </li>
             <li className="item">
               <div className="flex gap-8">
-                <Link href="#">
+                <Link
+                  href={"https://www.facebook.com/ozapscreen"}
+                  target="_blank"
+                >
                   <BsFacebook size={25} />
                 </Link>
-                <Link href="#">
+                <Link
+                  href="https://www.instagram.com/zapscreenbr/"
+                  target={"_blank"}
+                >
                   <BsInstagram size={25} />
                 </Link>
-                <Link href="#">
+                <Link
+                  href="https://www.youtube.com/@zapscreen"
+                  target={"_blank"}
+                >
                   <BsYoutube size={25} />
                 </Link>
               </div>
@@ -115,10 +124,11 @@ export function Header() {
         ></div>
       </header>
       <Link
-        href="#"
-        className="fixed w-full max-w-[1110px] left-1/2 -translate-x-1/2 bottom-16 z-10 flex justify-end"
+        href="https://wa.me/5548999999"
+        target={"_blank"}
+        className="fixed w-full left-1/2 -translate-x-1/2 bottom-16 z-10 flex justify-end"
       >
-        <div className="bg-[#25D366] rounded-full w-30 h-30 flex justify-center items-center mr-8 xl:mr-0">
+        <div className="bg-[#25D366] rounded-full w-30 h-30 flex justify-center items-center mr-8">
           <SiWhatsapp size={30} />
         </div>
       </Link>

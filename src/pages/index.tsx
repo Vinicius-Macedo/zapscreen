@@ -6,34 +6,15 @@ import StepSection from "../components/sections/StepSection";
 import imageLoader from "../loader";
 import FaqSection from "../components/sections/FaqSection";
 import Testimonial from "../components/Testimonial";
+import { SectionWithVideo } from "../components/SectionWithVideo";
+import Link from "next/link";
+import Icone from "../components/Icone";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <SectionWithImage
-        id="o-que-e"
-        title={
-          <>
-            O que é o <span className="text-gradient">ZapScreen?</span>
-          </>
-        }
-        description={
-          <>
-            O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de
-            eternizar os momentos mais especiais de seu evento. Imagine ter
-            centenas de fotógrafos registrando cada detalhe, cada emoção, cada
-            sorriso.
-            <br />
-            <br /> Com o ZapScreen, isso é possível! Nossa ferramenta permite
-            que seus convidados capturem fotos e vídeos através do WhatsApp e
-            essas mídias são exibidas em tempo real em telões
-          </>
-        }
-        callToAction={"Fale com a gente"}
-        imageUrl={"/img/section-image.webp"}
-        imageAlt={"section-image.webp"}
-      />
+      <SectionWithVideo />
       <DefaultMarginSection
         id="como-funciona"
         hasEffect={true}
@@ -44,9 +25,9 @@ export default function Home() {
         </h2>
         <div className="flex flex-col items-center gap-16">
           <StepSection
-            title={"O convidado envia a foto"}
+            title={"Envio da foto"}
             description={
-              "Tire uma foto e envie para o grupo do WhatsApp do evento. É fácil e rápido! Em questão de segundos, você pode ver sua imagem sendo exibida nos telões."
+              "Envie sua foto para o telão de forma fácil e rápida! Basta tirar uma foto com seu celular e enviá-la para o número de WhatsApp fornecido pelo ZapScreen. Em poucos segundos, sua foto será exibida nos telões, permitindo que todos possam compartilhar os melhores momentos do evento."
             }
             number={"01"}
             isClockWise={false}
@@ -63,9 +44,9 @@ export default function Home() {
             unoptimized
           />
           <StepSection
-            title={"Foto passa pela moderação"}
+            title={"Moderação da foto"}
             description={
-              "Para garantir que todas as imagens exibidas nos telões sejam apropriadas ao evento, cada foto passa por uma rápida moderação e sua foto estará pronta para ser exibida em pouco tempo."
+              "Para eventos que precisam de moderação, todas as fotos enviadas serão verificadas por um operador do ZapScreen. Isso garante que imagens inadequadas ou ofensivas sejam descartadas antes de serem exibidas nos telões."
             }
             number={"02"}
             isClockWise={true}
@@ -82,7 +63,7 @@ export default function Home() {
             unoptimized
           />
           <StepSection
-            title={"A IA melhora a foto"}
+            title={"Melhoria da Foto"}
             description={
               "Nós queremos que sua foto fique ainda melhor! Utilizamos inteligência artificial para fazer ajustes na cor, brilho e nitidez e sua imagem estará perfeita para ser exibida nos telões do evento."
             }
@@ -114,9 +95,72 @@ export default function Home() {
               "Laptop e pessoa segurando celuar que possui várias imagens"
             }
           />
+          <Image
+            src={"/img/arrow-down.svg"}
+            alt={""}
+            width={93}
+            height={94}
+            className={"object-contain opacity-20 -scale-x-100"}
+            loader={imageLoader}
+            unoptimized
+          />
+          <StepSection
+            title={"Download de todas as fotos"}
+            description={
+              "Conteúdo: Após o evento, os anfitriões podem fazer o download de todas as fotos recebidas através do ZapScreen. Isso permite que eles guardem todas as memórias do evento para sempre."
+            }
+            number={"05"}
+            isClockWise={false}
+            imageUrl={"/img/step-image-05.webp"}
+            imageAlt={
+              "Laptop e pessoa segurando celuar que possui várias imagens"
+            }
+          />
         </div>
       </DefaultMarginSection>
       <SectionWithImage
+        id="o-que-e"
+        title={
+          <>
+            O que é o <span className="text-gradient">ZapScreen?</span>
+          </>
+        }
+        description={
+          <>
+            O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de
+            eternizar os momentos mais especiais de seu evento. Imagine ter
+            centenas de fotógrafos registrando cada detalhe, cada emoção, cada
+            sorriso.
+            <br />
+            <br /> Com o ZapScreen, isso é possível! Nossa ferramenta permite
+            que seus convidados capturem fotos e vídeos através do WhatsApp e
+            essas mídias são exibidas em tempo real em telões
+          </>
+        }
+        callToAction={"Fale com a gente"}
+        imageUrl={"/img/section-image.webp"}
+        imageAlt={"section-image.webp"}
+      />
+      <DefaultMarginSection
+        hasEffect={true}
+        containerClassName={"bg-cover bg-center bg-no-repeat"}
+        styles={{ backgroundImage: "url('/img/section-background.webp')" }}
+      >
+        <div className="flex flex-col items-center gap-16 md:gap-32 py-32">
+          <h2 className="font-ubuntu font-bold text-center text-[32px] lg:text-[54px]">
+            Transforme suas fotos em memórias inesquecíveis com Zapscreen
+          </h2>
+          <Link
+            href="https://wa.me/5548999999"
+            target={"_blank"}
+            className="bg-gradient text-white px-16 py-6 rounded font-bold"
+          >
+            Quero no meu evento
+          </Link>
+        </div>
+      </DefaultMarginSection>
+      <SectionWithImage
+        invertOrder={true}
         title={
           <>
             Compartilhe <span className="text-gradient">suas memórias</span> em
@@ -134,7 +178,6 @@ export default function Home() {
         callToAction={"Fale com a gente"}
         imageUrl={"/img/section-image-2.webp"}
         imageAlt={"section-image.webp"}
-        invertOrder={true}
       />
       <DefaultMarginSection
         id="testemunhos"
@@ -170,43 +213,71 @@ export default function Home() {
             imageAlt={"Descrição da foto"}
           />
         </div>
-        <button className="bg-gradient text-white px-12 py-6 rounded font-bold">
+        <Link
+          href="https://wa.me/5548999999"
+          target={"_blank"}
+          className="bg-gradient text-white px-12 py-6 rounded font-bold"
+        >
           Tenha no seu evento
-        </button>
+        </Link>
       </DefaultMarginSection>
       <DefaultMarginSection
         hasEffect={true}
-        containerClassName={"bg-cover bg-center bg-no-repeat"}
-        styles={{ backgroundImage: "url('/img/section-background.webp')" }}
+        className="flex flex-col items-center gap-16 lg:gap-32"
       >
-        <div className="flex flex-col items-center gap-16 md:gap-32 py-32">
-          <h2 className="font-ubuntu font-bold text-center text-[32px] lg:text-[54px]">
-            Transforme suas fotos em memórias inesquecíveis com Zapscreen
+        <article className="flex flex-col gap-8">
+          <h2 className="title font-ubuntu font-bold text-center">
+            Para todos os tipos de <span className="text-gradient">evento</span>
           </h2>
-          <button className="bg-gradient text-white px-16 py-6 rounded font-bold">
-            Quero no meu evento
-          </button>
+          <p className="text text-whitegray text-center">
+            Nosso sistema de exibição de fotos em tempo real é perfeito para
+            todos os tipos de eventos, desde casamentos até festas de
+            aniversário! Com ele, todos os convidados podem participar e
+            compartilhar suas memórias, criando uma experiência única e
+            emocionante. Experimente agora e torne seu evento inesquecível!
+          </p>
+        </article>
+
+        <div className="flex justify-center flex-wrap items-end gap-15 lg:justify-between">
+          <Icone
+            imageUrl={"/img/icone-01.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Aniversários"}
+          />
+          <Icone
+            imageUrl={"/img/icone-02.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Festas"}
+          />
+          <Icone
+            imageUrl={"/img/icone-03.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Casamentos"}
+          />
+          <Icone
+            imageUrl={"/img/icone-04.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Shows"}
+          />
+          <Icone
+            imageUrl={"/img/icone-05.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Palestras"}
+          />
+          <Icone
+            imageUrl={"/img/icone-06.svg"}
+            imageAlt={"Icone de evento"}
+            title={"Báres"}
+          />
         </div>
+        <Link
+          href="https://wa.me/5548999999"
+          target={"_blank"}
+          className="bg-gradient text-white px-12 py-6 rounded font-bold"
+        >
+          Tenha no seu evento
+        </Link>
       </DefaultMarginSection>
-      {/* <SectionWithImage
-        title={
-          <>
-            Compartilhe <span className="text-gradient">suas memórias</span> em
-            tempo real com Zapscreen
-          </>
-        }
-        description={
-          <>
-            Uma ferramenta inovadora que permite aos convidados de um evento
-            capturar fotos, vídeos e textos através de um grupo no WhatsApp e
-            exibi-las em tempo real em telões e televisores espalhados pelo
-            evento.
-          </>
-        }
-        callToAction={"Fale com a gente"}
-        imageUrl={"/img/section-image.webp"}
-        imageAlt={"section-image.webp"}
-      /> */}
       <FaqSection />
     </main>
   );
