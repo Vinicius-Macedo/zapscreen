@@ -91,18 +91,21 @@ export function Header() {
             <li className="item">
               <div className="flex gap-8">
                 <Link
+                  aria-label="facebook"
                   href={"https://www.facebook.com/ozapscreen"}
                   target="_blank"
                 >
                   <BsFacebook size={25} />
                 </Link>
                 <Link
+                  aria-label="Instagram"
                   href="https://www.instagram.com/zapscreenbr/"
                   target={"_blank"}
                 >
                   <BsInstagram size={25} />
                 </Link>
                 <Link
+                  aria-label="youtube"
                   href="https://www.youtube.com/@zapscreen"
                   target={"_blank"}
                 >
@@ -126,6 +129,7 @@ export function Header() {
       <Link
         href="https://wa.me/5548999999"
         target={"_blank"}
+        aria-label="Link para whatsapp"
         className="fixed w-full left-1/2 -translate-x-1/2 bottom-16 z-10 flex justify-end"
       >
         <div className="bg-[#25D366] rounded-full w-30 h-30 flex justify-center items-center mr-8">
