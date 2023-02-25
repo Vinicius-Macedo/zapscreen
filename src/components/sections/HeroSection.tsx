@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function HeroSection() {
   const typedWords = useTyping([
-    "o casamento inesquecível!",
-    "a festa mais comentada!",
-    "o show mais lembrado!",
+    "Tenha o casamento inesquecível!",
+    "Tenha a festa mais comentada!",
+    "Tenha o show mais lembrado!",
   ]);
 
   return (
@@ -15,15 +15,17 @@ export default function HeroSection() {
       id="home"
       containerClassName="overflow-hidden pt-40 bg-center bg-cover bg-no-repeat bg-home"
     >
-      <div className="max-w-[540px] text-center flex flex-col items-center m-auto gap-12 sm:py-64">
+      <div className="max-w-[670px] text-center flex flex-col items-center m-auto gap-12 sm:py-64">
         <div className="flex flex-col gap-4">
           <h1 className="responsive-title font-bold relative">
             Compartilhe <span className="text-gradient">suas memórias</span> em
+            <br />
             tempo real com Zapscreen
           </h1>
           <p className="text-size blink-animation min-h-[135px] sm:min-h-min">
-            Todas as fotos do seu evento transmitidas em tempo real no telão.
-            Tenha {typedWords}
+            Todas as fotos do seu evento transmitidas em tempo real.
+            <br />
+            {typedWords}
           </p>
         </div>
         <Link
