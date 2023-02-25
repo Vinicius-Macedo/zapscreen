@@ -10,6 +10,7 @@ import { SectionWithVideo } from "../components/SectionWithVideo";
 import Link from "next/link";
 import Icone from "../components/Icone";
 import Topic from "../components/Topic";
+import ListItem from "../components/ListItem";
 
 export default function Home() {
   return (
@@ -290,11 +291,18 @@ export default function Home() {
       </DefaultMarginSection>
       <DefaultMarginSection className="flex flex-col gap-8 sm:gap-16 lg:gap-32">
         <h2 className="title font-ubuntu font-bold text-center">
-          Título aqui <span className="text-gradient">com destaque aqui</span>
+          Faça do seu <span className="text-gradient">evento</span> um sucesso!
         </h2>
+        <p className="text text-center text-whitegray">
+          Garanta a diversão e a interação dos seus convidados com o ZapScreen.
+        </p>
         <div className="grid gap-15 lg:grid-cols-3">
           <Topic
-            title={"Título do Card"}
+            title={"Fácil de usar"}
+            desc={"Não é necessário instalar nada, apenas use o WhatsApp."}
+          />
+          <Topic
+            title={"Acompanhe à distância"}
             desc={
               "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
             }
@@ -305,10 +313,47 @@ export default function Home() {
               "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
             }
           />
-          <Topic
-            title={"Título do card"}
+        </div>
+      </DefaultMarginSection>
+      <DefaultMarginSection className="flex flex-col gap-8 sm:gap-16 lg:gap-32">
+        <h2 className="title font-ubuntu font-bold text-center">
+          Faça do seu <span className="text-gradient">evento</span> um sucesso!
+        </h2>
+        <div className="grid gap-15">
+          <ListItem
+            title={"Engajamento"}
             desc={
-              "O ZapScreen é mais do que uma ferramenta tecnológica, é uma forma de eternizar os momentos mais especiais de seu evento. Imagine ter centenas de fotógrafos registrando cada detalhe, cada emoção, cada sorriso."
+              "Com a exibição das fotos em telões, os convidados se sentem parte do evento, gerando maior engajamento e interação entre eles."
+            }
+          />
+          <ListItem
+            title={"Compartilhamento"}
+            desc={
+              "Com o sistema, os convidados podem compartilhar suas fotos instantaneamente, criando memórias únicas e especiais do evento."
+            }
+          />
+          <ListItem
+            title={"Entretenimento"}
+            desc={
+              "O sistema de exibição de fotos em tempo real é uma atração por si só, proporcionando entretenimento e diversão para os convidados."
+            }
+          />
+          <ListItem
+            title={"Personalização"}
+            desc={
+              "Com a possibilidade de melhoria das fotos pela IA, as imagens ficam ainda mais personalizadas e únicas, agregando valor à experiência do evento."
+            }
+          />
+          <ListItem
+            title={"Recordação"}
+            desc={
+              "As fotos exibidas em telões ficam gravadas na memória dos convidados, tornando-se uma lembrança inesquecível e duradoura do evento."
+            }
+          />
+          <ListItem
+            title={"Visibilidade"}
+            desc={
+              "Com a exibição das fotos em telões, os patrocinadores e parceiros do evento ganham maior visibilidade, gerando maior reconhecimento e retorno sobre o investimento."
             }
           />
         </div>
