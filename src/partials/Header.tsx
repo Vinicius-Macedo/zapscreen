@@ -148,7 +148,7 @@ export function Header() {
         href="https://wa.me/5548999999"
         target={"_blank"}
         aria-label="Link para whatsapp"
-        className="fixed w-full left-1/2 -translate-x-1/2 bottom-16 z-10 flex justify-end"
+        className="fixed right-16 bottom-16 z-10"
       >
         <div className="bg-[#25D366] rounded-full w-30 h-30 flex justify-center items-center mr-8">
           <SiWhatsapp size={30} />
